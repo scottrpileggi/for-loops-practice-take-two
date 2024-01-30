@@ -6,8 +6,21 @@
 
 export function getAllWithdrawals(array) {
   // Your code goes here...
+  let sum = 0;
+  let sumArray = [];
 
-}
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].withdrawals) {
+      for (let j = 0; j < array[i].withdrawals.length; j++) {
+        sum += array[i].withdrawals[j];
+      }
+    }
+    sumArray.push(sum);
+    sum = 0;
+    }
+    return sumArray;
+  }
+
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-11"

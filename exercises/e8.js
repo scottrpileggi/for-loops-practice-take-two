@@ -6,7 +6,13 @@
 
 export function getClientWithGreatestBalance(array) {
   // Your code goes here...
-
+  let richBitch = array[0];
+  for (let bitch of array) {
+    if (bitch.balance > richBitch.balance) {
+      richBitch = bitch;
+    }
+  }
+  return [richBitch];
 }
 
 
